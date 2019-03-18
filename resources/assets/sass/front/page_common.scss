@@ -1,0 +1,258 @@
+.page_top_area {
+    background-image: url('../../images/bg_top_wave.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 11.4rem;
+    margin-top: 6.5rem;
+    position: relative;
+    &.second {
+        background-image: url('../../images/bg_foot_wave.png');
+        height: 12.6rem;
+        margin: 0 0 10rem;
+        .inner-width {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 12rem 2rem 0;
+        }
+    }
+    .title_area {
+        text-align: center;
+        .cn {
+            font-size: 1.124rem;
+            letter-spacing: 10.2px;
+            color: #141414;
+        }
+        .en {
+            font-size: 3.4285rem;
+            letter-spacing: 9.4px;
+            color: #323232;
+        }
+    }
+    .paper_plane {
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        position: absolute;
+        &.first {
+            background-image: url('../../images/paper_plane_01.png');
+            width: 54px;
+            height: 45px;
+            top: -11%;
+            left: 17.63%;
+        }
+        &.second {
+            background-image: url('../../images/paper_plane_02.png');
+            width: 39px;
+            height: 21px;
+            top: 28%;
+            right: 26%;
+        }
+        &.third {
+            background-image: url('../../images/paper_plane_03.png');
+            width: 79px;
+            height: 66px;
+            top: -32%;
+            right: 15%;
+        }
+    }
+    .book {
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        position: absolute;
+        &.first {
+            background-image: url('../../images/book_01.png');
+            width: 60px;
+            height: 47px;
+            top: 18%;
+            left: 18.8%;
+        }
+        &.second {
+            background-image: url('../../images/book_02.png');
+            width: 84px;
+            height: 101px;
+            top: -9%;
+            left: 31%;
+        }
+        &.third {
+            background-image: url('../../images/book_03.png');
+            width: 129px;
+            height: 58px;
+            top: 75%;
+            right: 32%;
+        }
+        &.fourth {
+            background-image: url('../../images/book_04.png');
+            width: 80px;
+            height: 100px;
+            top: 30%;
+            right: 21%;
+        }
+    }
+    .light {
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        position: absolute;
+        &.first {
+            background-image: url('../../images/light_01.png');
+            width: 25px;
+            height: 38px;
+            top: -34%;
+            left: 16%;
+        }
+        &.second {
+            background-image: url('../../images/light_02.png');
+            width: 61px;
+            height: 93px;
+            top: -9%;
+            left: 28%;
+        }
+        &.third {
+            background-image: url('../../images/light_03.png');
+            width: 49px;
+            height: 76px;
+            top: -24%;
+            right: 32%;
+        }
+        &.fourth {
+            background-image: url('../../images/light_04.png');
+            width: 30px;
+            height: 47px;
+            top: 12%;
+            right: 19%;
+        }
+    }
+}
+
+.top_triangle {
+    -webkit-clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    background-color: #f0f0f0;
+    width: 100%;
+    height: 5rem;
+}
+
+.bottom_triangle {
+    -webkit-clip-path: polygon(50% 100%, 0% 0%, 100% 0%);
+    clip-path: polygon(50% 100%, 0% 0%, 100% 0%);
+    background-color: #f0f0f0;
+    width: 100%;
+    height: 5rem;
+    margin-bottom: 5rem;
+}
+
+.page_content_area {
+    background-color: #f0f0f0;
+    padding-bottom: 5rem;
+}
+
+.tag {
+    font-size: 1.0714rem;
+    font-weight: 500;
+    text-align: center;
+    color: #fff;
+    width: 110px;
+    border-radius: 15px;
+    height: 30px;
+    line-height: 30px;
+    &.pink {
+        background-color: #de3c68;
+    }
+    &.yellow {
+        background-color: #f5a623;
+    }
+    &.blue {
+        background-color: #00a0e9;
+    }
+    &.green {
+        background-color: #2eb977;
+    }
+}
+
+.breadcrumb_area {
+    padding: 1rem 0;
+    color: #787878;
+    .breadcrumb_list {
+        text-align: center;
+        .breadcrumb_item {
+            display: inline-block;
+            &::before {
+                display: inline-block;
+                padding: 0 .5rem;
+                color: #6c757d;
+                content: "/";
+            }
+            &:first-child {
+                &::before {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+@media all and (max-width: 767px) {
+    .page_top_area {
+        margin-top: 3.6rem;
+        .title_area {
+            .cn {
+                font-size: 1.0714rem;
+                letter-spacing: 9px;
+            }
+            .en {
+                font-size: 2rem;
+                letter-spacing: 2px;
+            }
+        }
+        .paper_plane {
+            &.first {
+                width: 37px;
+                height: 31px;
+                top: 12%;
+                left: 8%;
+            }
+            &.second {
+                width: 26px;
+                height: 14px;
+                top: 24%;
+                right: 18%;
+            }
+            &.third {
+                width: 40px;
+                height: 34px;
+                top: -6%;
+                right: 5%;
+            }
+        }
+        .book {
+            &.second {
+                width: 41.7px;
+                height: 50.7px;
+                top: 72%;
+                left: 12%;
+            }
+            &.third {
+                width: 63px;
+                height: 28px;
+                top: 95%;
+                right: 8%;
+            }
+        }
+        .light {
+            &.second {
+                width: 31px;
+                height: 47px;
+                top: 20%;
+                left: 8%;
+            }
+            &.third {
+                width: 29px;
+                height: 45px;
+                top: 6%;
+                right: 10%;
+            }
+        }
+    }
+}

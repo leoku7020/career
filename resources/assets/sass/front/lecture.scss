@@ -1,0 +1,81 @@
+.lecture_area {
+    .select_area {
+        margin-bottom: 4rem;
+        padding: 0 10%;
+        .select_list {
+            .select_item {
+                float: left;
+                width: 20%;
+                letter-spacing: 2.4px;
+                text-align: center;
+                color: #9b9b9b;
+                font-size: 2rem;
+                cursor: pointer;
+                &.active {
+                    color: #00a0e9;
+                    span {
+                        border-bottom: 1px solid #00a0e9;
+                        padding-bottom: 5px;
+                    }
+                }
+                &:hover {
+                    color: #00a0e9;
+                    span {
+                        border-bottom: 1px solid #00a0e9;
+                        padding-bottom: 5px;
+                    }
+                }
+            }
+        }
+        .select_list_mobile {
+            display: none;
+        }
+    }
+    .lecture_content_area {
+        .lecture_content_block {
+            border-radius: 6px;
+            background-color: #fff;
+            padding: 20px;
+            .date_area {
+                border-right: 1px dashed #00a0e9;
+                float: left;
+                width: 20%;
+                .year {
+                    color: #9b9b9b; // font-size: 
+                }
+                .date {
+                    color: #00a0e9;
+                }
+            }
+            .content_area {
+                float: left;
+                width: 80%;
+                .content_title {
+                    line-height: 1.31;
+                    letter-spacing: 0.8px;
+                    color: #4a4a4a;
+                    font-size: 1.8571rem;
+                    font-weight: 500;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
+            }
+        }
+    }
+}
+
+@media all and (max-width: 767px) {
+    .lecture_area {
+        .select_area {
+            margin-bottom: 2rem;
+            padding: 0;
+            .select_list {
+                display: none;
+            }
+            .select_list_mobile {
+                display: block;
+            }
+        }
+    }
+}

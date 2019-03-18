@@ -1,0 +1,12 @@
+career:
+  image: career
+  container_name: career
+  restart: always
+  expose:
+    - "80"
+  volumes:
+    - /var/run/docker.sock:/tmp/docker.sock:ro
+    - /www/career/shared:/www/career/shared
+    - ./:/var/www/html
+  environment:
+    - VIRTUAL_HOST=career.larvata.tw

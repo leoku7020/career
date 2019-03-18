@@ -1,0 +1,285 @@
+.news_area .index_news_area .index_news_block {
+  margin: 0 4rem 30px;
+  background-color: #fff;
+  border-radius: 6px;
+  overflow: hidden; }
+  .news_area .index_news_area .index_news_block .left_block {
+    width: 55%;
+    float: left; }
+    .news_area .index_news_area .index_news_block .left_block .news_images_block {
+      width: 50%;
+      height: 189px;
+      overflow: hidden;
+      position: relative;
+      float: left;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center; }
+      .news_area .index_news_area .index_news_block .left_block .news_images_block.bg_first {
+        background-image: url("../../images/index_new_01.png"); }
+      .news_area .index_news_area .index_news_block .left_block .news_images_block.bg_second {
+        background-image: url("../../images/index_new_02.png"); }
+      .news_area .index_news_area .index_news_block .left_block .news_images_block.bg_third {
+        background-image: url("../../images/index_new_03.png"); }
+      .news_area .index_news_area .index_news_block .left_block .news_images_block.bg_fourth {
+        background-image: url("../../images/index_new_04.png"); }
+      .news_area .index_news_area .index_news_block .left_block .news_images_block .triangle {
+        background-color: #fff;
+        width: 300px;
+        -webkit-clip-path: polygon(100% 0, 61% 100%, 100% 100%);
+        clip-path: polygon(100% 0, 61% 100%, 100% 100%);
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 189px; }
+    .news_area .index_news_area .index_news_block .left_block .news_date_area {
+      float: left;
+      width: 50%;
+      padding-top: 9%; }
+      .news_area .index_news_area .index_news_block .left_block .news_date_area .day {
+        font-size: 4.1428rem;
+        letter-spacing: 4.5px;
+        float: left;
+        margin-right: 15px; }
+        .news_area .index_news_area .index_news_block .left_block .news_date_area .day.pink {
+          color: #de3c68; }
+        .news_area .index_news_area .index_news_block .left_block .news_date_area .day.yellow {
+          color: #f5a623; }
+        .news_area .index_news_area .index_news_block .left_block .news_date_area .day.blue {
+          color: #00a0e9; }
+        .news_area .index_news_area .index_news_block .left_block .news_date_area .day.green {
+          color: #2eb977; }
+      .news_area .index_news_area .index_news_block .left_block .news_date_area .news_date_block {
+        float: left;
+        padding-top: 7%; }
+        .news_area .index_news_area .index_news_block .left_block .news_date_area .news_date_block .month {
+          font-size: 1.4285rem;
+          letter-spacing: 3.8px; }
+        .news_area .index_news_area .index_news_block .left_block .news_date_area .news_date_block .text {
+          font-size: 1.0714rem;
+          letter-spacing: 4.3px;
+          color: #9b9b9b; }
+  .news_area .index_news_area .index_news_block .right_block {
+    width: 45%;
+    float: left; }
+    .news_area .index_news_area .index_news_block .right_block .decorative_block {
+      float: left;
+      position: relative; }
+      .news_area .index_news_area .index_news_block .right_block .decorative_block .decorative_line {
+        float: right;
+        border-left: 1px dashed #f0f0f0;
+        height: 171px;
+        width: 1px;
+        -ms-transform: rotate(31deg);
+        transform: rotate(31deg);
+        -o-transform: rotate(31deg);
+        -webkit-transform: rotate(31deg);
+        -moz-transform: rotate(31deg);
+        position: absolute;
+        right: 25px;
+        top: 30px; }
+    .news_area .index_news_area .index_news_block .right_block .news_content_block {
+      float: left;
+      padding: 2.8rem; }
+      .news_area .index_news_area .index_news_block .right_block .news_content_block .tag {
+        font-size: 1.0714rem;
+        font-weight: 500;
+        width: 140px;
+        height: 30px;
+        border-radius: 15.5px;
+        color: #fff;
+        text-align: center;
+        line-height: 30px;
+        margin-bottom: 10px; }
+        .news_area .index_news_area .index_news_block .right_block .news_content_block .tag.pink {
+          background-color: #de3c68; }
+        .news_area .index_news_area .index_news_block .right_block .news_content_block .tag.yellow {
+          background-color: #f5a623; }
+        .news_area .index_news_area .index_news_block .right_block .news_content_block .tag.blue {
+          background-color: #00a0e9; }
+        .news_area .index_news_area .index_news_block .right_block .news_content_block .tag.green {
+          background-color: #2eb977; }
+      .news_area .index_news_area .index_news_block .right_block .news_content_block .title {
+        font-size: 1.5714rem;
+        line-height: 1.55;
+        letter-spacing: 0.7px;
+        color: #4a4a4a;
+        font-weight: 300;
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        line-height: 34px;
+        height: 68px; }
+
+.more_btn_block {
+  padding-bottom: 1rem; }
+  .more_btn_block .more_btn {
+    width: 270px;
+    margin: 0 auto;
+    display: block;
+    text-align: center;
+    background-color: rgba(216, 216, 216, 0.55);
+    border-radius: 30px;
+    padding: 1rem 2rem;
+    letter-spacing: 4.9px;
+    color: #323232; }
+
+.campus_job_area .campus_job_block {
+  margin: -4rem 4rem 6rem;
+  border-radius: 6px;
+  background-color: #ffffff;
+  padding: 2.8rem;
+  position: relative;
+  color: #4a4a4a; }
+  .campus_job_area .campus_job_block .title {
+    letter-spacing: 0.8px;
+    font-size: 1.857rem;
+    float: left;
+    width: 40%;
+    line-height: 3.5714rem;
+    margin-bottom: 1.5rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; }
+  .campus_job_area .campus_job_block .date {
+    float: right;
+    width: 47%;
+    line-height: 3.5714rem;
+    font-size: 1.1428rem;
+    font-weight: 300;
+    margin-bottom: 1.5rem; }
+  .campus_job_area .campus_job_block .line {
+    border-left: 1px dashed #f0f0f0;
+    height: 171px;
+    width: 1px;
+    -ms-transform: rotate(31deg);
+    transform: rotate(31deg);
+    -o-transform: rotate(31deg);
+    -webkit-transform: rotate(31deg);
+    -moz-transform: rotate(31deg);
+    position: absolute;
+    left: 45%;
+    top: 30px; }
+  .campus_job_area .campus_job_block .info {
+    font-size: 1.1428rem;
+    color: #4a4a4a;
+    font-weight: 300;
+    line-height: 1.5;
+    letter-spacing: 0.5px;
+    float: left;
+    width: 40%;
+    border-left: 1px dashed #00a0e9;
+    padding-left: 1rem; }
+  .campus_job_area .campus_job_block .apply_btn {
+    float: right;
+    width: 53%;
+    font-size: 1.1428rem; }
+    .campus_job_area .campus_job_block .apply_btn a {
+      width: 204px;
+      height: 45px;
+      line-height: 45px;
+      border-radius: 30.5px;
+      background-color: #0859a8;
+      display: block;
+      float: right;
+      color: #fff;
+      text-align: center;
+      letter-spacing: 1.9px; }
+
+.promotion_link_area {
+  margin-bottom: 5rem; }
+  .promotion_link_area .title {
+    letter-spacing: 7px;
+    color: #141414;
+    font-size: 1.214rem;
+    text-align: center;
+    margin-bottom: 1.2rem; }
+  .promotion_link_area .line {
+    width: 40px;
+    border-top: 1px solid #363636;
+    margin: 0 auto 3rem; }
+  .promotion_link_area .promotion_link_block {
+    padding: 0 4rem;
+    margin-bottom: 2rem; }
+    .promotion_link_area .promotion_link_block .promotion_link_item {
+      height: 60px;
+      border-radius: 4px;
+      box-shadow: 5px 5px 14px 0 rgba(0, 0, 0, 0.1);
+      background-color: #fff;
+      display: block;
+      margin: 0 0.5rem 1rem;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center; }
+  .promotion_link_area .more_btn {
+    letter-spacing: 3px;
+    color: #323232;
+    font-size: 1.1428rem;
+    text-align: right;
+    display: block;
+    margin-right: 4.5rem; }
+
+@media all and (max-width: 767px) {
+  .news_area .index_news_area .index_news_block {
+    margin: 0 0rem 30px; }
+    .news_area .index_news_area .index_news_block .left_block {
+      width: 100%;
+      border-bottom: 1px dashed #f0f0f0; }
+      .news_area .index_news_area .index_news_block .left_block .news_images_block {
+        width: 100%;
+        height: 97px; }
+        .news_area .index_news_area .index_news_block .left_block .news_images_block .triangle {
+          display: none; }
+      .news_area .index_news_area .index_news_block .left_block .news_date_area {
+        width: 100%;
+        padding: 0 2rem; }
+    .news_area .index_news_area .index_news_block .right_block {
+      width: 100%; }
+      .news_area .index_news_area .index_news_block .right_block .decorative_block {
+        display: none; }
+      .news_area .index_news_area .index_news_block .right_block .news_content_block {
+        padding: 2rem;
+        position: relative; }
+        .news_area .index_news_area .index_news_block .right_block .news_content_block .tag {
+          position: absolute;
+          right: 2rem;
+          top: -4rem;
+          width: 88px; }
+        .news_area .index_news_area .index_news_block .right_block .news_content_block .title {
+          font-size: 1.25rem;
+          line-height: 1.53; }
+  .more_btn_block .more_btn {
+    width: 220px; }
+  .campus_job_area .campus_job_block {
+    margin: -4rem 0rem 6rem; }
+    .campus_job_area .campus_job_block .title {
+      width: 100%;
+      font-size: 1.6667rem; }
+    .campus_job_area .campus_job_block .date {
+      float: left;
+      width: 100%;
+      border-bottom: 1px dashed #f0f0f0; }
+    .campus_job_area .campus_job_block .line {
+      display: none; }
+    .campus_job_area .campus_job_block .info {
+      width: 100%;
+      border-left: 0;
+      float: left;
+      margin-bottom: 2rem; }
+      .campus_job_area .campus_job_block .info li {
+        list-style: disc; }
+    .campus_job_area .campus_job_block .apply_btn {
+      float: left;
+      width: 100%; }
+      .campus_job_area .campus_job_block .apply_btn a {
+        float: none;
+        margin: 0 auto; }
+  .promotion_link_area .promotion_link_block {
+    padding: 0; }
+    .promotion_link_area .promotion_link_block .promotion_link_item {
+      width: 260px;
+      margin: 0 auto 1rem; }
+  .promotion_link_area .more_btn {
+    text-align: center;
+    margin-right: 0; } }
