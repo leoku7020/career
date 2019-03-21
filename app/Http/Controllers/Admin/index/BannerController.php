@@ -65,7 +65,7 @@ class BannerController extends Controller
         //更新資料
         $banner = Banner::updateData($input,$id);
         if($banner){ //成功
-            if($fileName){
+            if($request->file('file')){
                 //刪除舊檔案
                 $delete = FileProcess::deleteFile($banner,'banners');
                 //儲存新檔案resize Img
@@ -139,7 +139,7 @@ class BannerController extends Controller
         //更新資料
         $banner = Banner::updateData($input,$id);
         if($banner){ //成功
-            if($fileName){
+            if($request->file('file')){
                 //刪除舊檔案
                 $delete = FileProcess::deleteFile($banner,'banners');
                 //儲存新檔案resize Img

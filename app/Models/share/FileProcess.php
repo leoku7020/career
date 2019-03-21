@@ -12,7 +12,7 @@ class FileProcess extends Model
 
     	try{
     		//放檔案
-            $file->move('images/'.$path, $fileName);
+            $file->move('images/upload/'.$path, $fileName);
     	}catch(\Exception $e){
     		return false;
     	}
@@ -33,6 +33,8 @@ class FileProcess extends Model
 			$img->save('images/upload/'.$path.'/'.$fileName);
 
 		}catch(\Exception $e){
+            // print_r($e->getMessage());
+            // exit;
 			return false;
 		}
 
@@ -43,8 +45,10 @@ class FileProcess extends Model
     static function deleteFile($fileName,$path){
     	try{
     		//刪除舊檔案
-        	File::delete('images/'.$path.'/'.$fileName);
+        	File::delete('images/upload/'.$path.'/'.$fileName);
     	}catch(\Exception $e){
+            // print_r($e->getMessage());
+            // exit;
     		return false;
     	}
 

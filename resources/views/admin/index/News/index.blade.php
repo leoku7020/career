@@ -153,6 +153,16 @@
                                                     @endif
                                                 </td>
                                                 <td>
+                                                    
+                                                    @if($new->top)
+                                                        <a href="{{ route('index.newsDisTop',$new->id) }}" class="btn btn-warning m-btn m-btn--icon m-btn--icon-only">
+                                                            <i class="la la-star"></i>
+                                                        </a>
+                                                    @else
+                                                        <a href="{{ route('index.newsToTop',$new->id) }}" class="btn btn-warning m-btn m-btn--icon m-btn--icon-only">
+                                                            <i class="la la-star-o"></i>
+                                                        </a>
+                                                    @endif
                                                     <form action="{{ route('index.news.destroy',$new->id) }}" method="POST" style="display: inline-block" id="delete_{{$new->id}}">
                                                         {{ csrf_field() }}
                                                         {{ method_field('DELETE') }}

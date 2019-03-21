@@ -58,14 +58,12 @@
 		return convdataTime;
 	 
 	}
-	//get carousel data
-	function getCarousel(id,type){
+	//get Links data
+	function getLinks(id){
 		var model = $('#m_modal_1');
-		model.find('.stime').val('');
-		model.find('.edtime').val('');
 		$.ajax({
 				type: 'POST',
-				url: '/api/ajax/getCarousel',
+				url: '/api/ajax/getLinks',
 				data: { 'id' : id},
 				dataType: 'json',
 				headers: {
@@ -76,28 +74,9 @@
 					// swal("成功", "已發出測試訊息", "success");
 					// console.log(data);
 					var m_id = data.data[0]['material_id'];
-					var stime = convert(data.data[0]['start_time']);
-					var edtime = (data.data[0]['end_time'] == "0" ? '' : convert(data.data[0]['end_time']));
-					var status = data.data[0]['status'];
-					model.find('.status').selectpicker('val',status);
 					model.find('.no').text(data.data[0]['sort']);
-					model.find('.stime').attr('disabled',false);
-					model.find('.etime').attr('disabled',false);
-					if(status == "1"){ //上架中
-						model.find('.stime').attr('disabled',true);
-						model.find('.stime').val('系統自動帶入現在時間');
-						model.find('.edtime').val(edtime);
-					}else if(status == "2"){ //等待上架
-						model.find('.stime').val(stime);
-						model.find('.edtime').val(edtime);
-					}else{ //已下架
-						model.find('.stime').attr('disabled',true);
-						model.find('.edtime').attr('disabled',true);
-						model.find('.stime').val('系統自動帶入現在時間');
-						model.find('.edtime').val('系統自動帶入現在時間');
-					}
 					
-					$('#form1').attr('action',('/admin/Carousel/Carousel/'+data.data[0]['id']));
+					$('#form1').attr('action',('/admin/Index/link/'+data.data[0]['id']));
 					data.material.forEach(function(item, index, array){
 						var selected = '';
 						if(m_id == item.id){
@@ -118,15 +97,12 @@
 			}
 		})
 	}
-	// submit Carousel 
-	$('.Carouselsubmit').click(function(){
+	// submit links 
+	$('.Linksubmit').click(function(){
 		var model = $('#m_modal_1');
-		var status = model.find('.status').selectpicker('val');
-		var stime = model.find('.stime').val();
-		var edtime = model.find('.edtime').val();
-		var m_id = model.find('.material').selectpicker('val');
-		if(stime == "" || status=="select"){
-			swal("錯誤", "資料有誤", "error");
+		var m_id = model.find('#material_id').selectpicker('val');
+		if(m_id=="select"){
+			swal("錯誤", "請選擇素材", "error");
 		}else{
 			$('#form1').submit();
 		}
@@ -923,5 +899,3 @@
     		//error
     	}
     })
-    
-

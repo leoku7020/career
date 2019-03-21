@@ -49,43 +49,10 @@ class DatabaseSeeder extends Seeder
         $this->call(TestBannersSeeder::class);
         //最新消息
         $this->call(TestNewsSeeder::class);
-        // //通知事項
-        // $this->call(TestOperationRecordsSeeder::class);
-        // //首頁輪播
-        // $this->call(TestCarouselSeeder::class);
-        // //素材庫
-        // $this->call(TestMaterialSeeder::class);
-        
-        // //全版廣告
-        // $this->call(TestAdSeeder::class);
-        // //最新活動類別
-        // $this->call(TestCategorySeeder::class);
-        // //文案管理
-        // $this->call(TestCopywritingSeeder::class);
-        // //最新消息歷史紀錄
-        // $this->call(TestNewsRecordsSeeder::class);
-        // //禮讚會員權益
-        // $this->call(TestPraseRightSeeder::class);
-        // //活動公告
-        // $this->call(TestEventSeeder::class);
-        // //發票金額門檻
-        // $this->call(TestMoneyLevelSeeder::class);
-        // //活動代碼
-        // $this->call(TestActivitySeeder::class);
-        // //尊榮會員權益
-        // $this->call(TestVIPRightSeeder::class);
-        // //優惠卷
-        // $this->call(TestOfferSeeder::class);
-        // //歷史優惠卷
-        // $this->call(TestOfferRecordsSeeder::class);
-        // //優惠卷使用紀錄
-        // $this->call(TestOfferUseRecordsSeeder::class);
-        // //推播會員
-        // $this->call(TestMemberSeeder::class);
-        // //俱樂部訂位紀錄
-        // $this->call(TestBookingRecordsSeeder::class);
-        // //俱樂部預約時段
-        // $this->call(TestBookingScheduleSeeder::class);
+        //連結
+        $this->call(TestLinksSeeder::class);
+        //連結素材
+        $this->call(TestMaterialSeeder::class);
         
     }
 }

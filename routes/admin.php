@@ -33,6 +33,15 @@ Route::group(['namespace'=>'Admin', 'prefix' => 'admin','middleware' => 'auth'],
         Route::post('bannerUp','index\BannerController@up')->name('bannerUp');
         Route::post('bannerDown','index\BannerController@down')->name('bannerDown');
         Route::post('BatchDelete','index\NewsController@batchDestroy')->name('newsBatchDelete');
+        Route::get('toTop/{id}','index\NewsController@toTop')->name('newsToTop');
+        Route::get('disTop/{id}','index\NewsController@disTop')->name('newsDisTop');
+        Route::resource('link','index\LinksController');
+        Route::post('linkUp','index\LinksController@up')->name('linkUp');
+        Route::post('linkDown','index\LinksController@down')->name('linkDown');
+        Route::resource('material','index\MaterialController');
+        Route::post('materialSearch','index\MaterialController@search')->name('materialSearch');
+        Route::get('materialSearch','index\MaterialController@search')->name('materialSearch');
+        Route::post('materialBatchDelete','index\MaterialController@batchDestroy')->name('materialBatchDelete');
     });
     
 

@@ -25,7 +25,7 @@
                             <a href="">業師駐診</a>
                         </li>
                         <li class="nav-item">
-                            <a href="">職涯講座</a>
+                            <a href="{{ route('lecture') }}">職涯講座</a>
                         </li>
                         <li class="nav-item">
                             <a href="">校外實習</a>
@@ -93,7 +93,7 @@
                             <a href="">業師駐診</a>
                         </li>
                         <li class="mobile_menu_item">
-                            <a href="">職涯講座</a>
+                            <a href="{{ route('lecture') }}">職涯講座</a>
                         </li>
                         <li class="mobile_menu_item">
                             <a href="">校外實習</a>
@@ -112,9 +112,9 @@
     <div class="slider_wrapper">
         <div class="outer-width">
             <div class="slider_area">
-                <div class="image_block" style="background-image:url('{{ url('images/slider_01.jpg') }}')"></div>
-                <div class="image_block" style="background-image:url('{{ url('images/slider_02.jpg') }}')"></div>
-                <div class="image_block" style="background-image:url('{{ url('images/slider_01.jpg') }}')"></div>
+                @foreach ($banners as $banner)
+                   <div class="image_block" style="background-image:url('{{ url('images/upload/banners/'.$banner->cover) }}')"></div>
+                @endforeach
             </div>
         </div>
     </div>

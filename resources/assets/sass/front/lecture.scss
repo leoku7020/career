@@ -36,22 +36,34 @@
             border-radius: 6px;
             background-color: #fff;
             padding: 20px;
+            margin-bottom: 2rem;
             .date_area {
                 border-right: 1px dashed #00a0e9;
                 float: left;
                 width: 20%;
+                padding: 1.5rem 0;
                 .year {
-                    color: #9b9b9b; // font-size: 
+                    font-size: 1.0714rem;
+                    letter-spacing: 4.3px;
+                    color: #9b9b9b;
+                    font-weight: 500;
+                    padding-left: 2px;
                 }
                 .date {
                     color: #00a0e9;
+                    font-size: 3.5714rem;
+                    letter-spacing: 4.5px;
+                    float: left;
+                    margin-right: 15px;
+                    font-weight: 500;
                 }
             }
             .content_area {
                 float: left;
                 width: 80%;
+                padding-left: 2rem;
                 .content_title {
-                    line-height: 1.31;
+                    // line-height: 1.31;
                     letter-spacing: 0.8px;
                     color: #4a4a4a;
                     font-size: 1.8571rem;
@@ -59,6 +71,103 @@
                     white-space: nowrap;
                     overflow: hidden;
                     text-overflow: ellipsis;
+                    padding: .5rem 0 1rem;
+                }
+                .info {
+                    border-right: 1px dashed #00a0e9;
+                    float: left;
+                    width: 185px;
+                }
+                .presenter {
+                    float: left;
+                    width: calc(100% - 370px);
+                    padding-left: 2rem;
+                    .title {
+                        width: 70px;
+                        float: left;
+                    }
+                    .text {
+                        float: left;
+                        width: calc(100% - 90px);
+                        overflow: hidden;
+                        display: -webkit-box;
+                        -webkit-box-orient: vertical;
+                        -webkit-line-clamp: 3;
+                        line-height: 27px;
+                        height: 80px;
+                    }
+                }
+                .detail_block {
+                    float: left;
+                    width: 185px;
+                    .detail_bt {
+                        color: #fff;
+                        background-color: #0859a8;
+                        width: 150px;
+                        height: 45px;
+                        border-radius: 30.5px;
+                        display: block;
+                        text-align: center;
+                        font-size: 1.0714rem;
+                        line-height: 45px;
+                        float: right;
+                        margin-top: 2.5rem;
+                    }
+                }
+                .time {
+                    margin-bottom: 1.5rem;
+                }
+                .title {
+                    float: left;
+                    color: #fff;
+                    border-radius: 16px;
+                    background-color: #00a0e9;
+                    padding: 5px 15px;
+                    font-size: 0.9285rem;
+                    margin-right: 10px;
+                    text-align: center;
+                }
+                .text {
+                    float: left;
+                    font-size: 1.1428rem;
+                    padding: 3px 0;
+                }
+            }
+        }
+    }
+}
+
+.apply_area {
+    border-top: 1px dashed #9b9b9b;
+    padding-top: 3rem;
+}
+
+@media all and (max-width: 992px) {
+    .lecture_area {
+        .lecture_content_area {
+            .lecture_content_block {
+                .date_area {
+                    width: 100%;
+                    padding: 0;
+                    border-right: none;
+                    .date {
+                        font-size: 30px;
+                    }
+                }
+                .content_area {
+                    width: 100%;
+                    padding-left: 0;
+                    .content_title {
+                        white-space: inherit;
+                        display: -webkit-box;
+                        -webkit-box-orient: vertical;
+                        -webkit-line-clamp: 2;
+                        max-height: 84px;
+                        border-bottom: 1px dashed #00a0e9;
+                        margin-bottom: 2rem;
+                        font-size: 1.428rem; // padding: 0;
+                        line-height: 2.5rem;
+                    }
                 }
             }
         }
@@ -75,6 +184,40 @@
             }
             .select_list_mobile {
                 display: block;
+            }
+        }
+        .lecture_content_area {
+            .lecture_content_block {
+                .content_area {
+                    .info {
+                        width: 100%;
+                        border-right: 0;
+                        margin-bottom: 1rem;
+                    }
+                    .presenter {
+                        width: 100%;
+                        padding-left: 0;
+                        margin-bottom: 2rem;
+                        .title {
+                            width: auto;
+                            margin-bottom: .5rem;
+                        }
+                        .text {
+                            width: 100%;
+                            height: auto;
+                        }
+                    }
+                    .time {
+                        margin-bottom: 1rem;
+                    }
+                    .detail_block {
+                        width: 100%;
+                        .detail_bt {
+                            margin: 0 auto;
+                            float: none;
+                        }
+                    }
+                }
             }
         }
     }

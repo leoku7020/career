@@ -1,3 +1,7 @@
+@php
+    $type_array = ['1'=>'pink','2'=>'yellow','3'=>'blue','4'=>'green'];
+    $type_text = ['1'=>'實習資訊','2'=>'徵才快報','3'=>'活動公告','4'=>'一般訊息']; 
+@endphp
 @extends('layouts.page')
 @section('content')
 
@@ -17,11 +21,14 @@
         <div class="inner-width">
             <div class="select_area">
                 <ul class="select_list clearfix">
-                    <li class="select_item active">全部</li>
-                    <li class="select_item">實習資訊</li>
-                    <li class="select_item">徵才快報</li>
-                    <li class="select_item">活動公告</li>
-                    <li class="select_item">一般訊息</li>
+                    <li class="select_item {{$type == '' ? 'active':''}}">
+                        <a href="/news">全部</a>
+                    </li>
+                    @foreach ($type_text as $key => $value)
+                        <li class="select_item {{$type == $key ? 'active':''}}" >
+                            <a href="{{'?type='.$key}}">{{$value}}</a>
+                        </li>
+                    @endforeach
                 </ul>
                 <select class="form-control select_list_mobile" id="">
                     <option>全部</option>
@@ -32,54 +39,24 @@
                 </select>
             </div>
             <div class="news_content_area">
-                <div class="title">全部最新消息</div>
+                <div class="title">{{$type == '' ? '全部最新消息' : $type_text[$type]}}</div>
                 <ul class="news_list">
-                    <li class="news_item">
-                        <a href="{{ route('news.view',['id'=>0]) }}" class="clearfix">
-                            <div class="date">2018/07/14</div>
-                            <div class="tag pink">實習資訊</div>
-                            <div class="fixtop">[置頂]</div>
-                            <div class="content">轉知「大專校院與國立故宮博物院人才培育合作實習計畫」，轉知「大專校院與國立故宮博物院人才培育合作實習計畫」，轉知「大專校院與國立故宮博物院人才培育合作實習計畫」</div>
-                        </a>
-                    </li>
-                    <li class="news_item">
-                        <a href="" class="clearfix">
-                            <div class="date">2018/07/14</div>
-                            <div class="tag yellow">徵才快報</div>
-                            <div class="fixtop">[置頂]</div>
-                            <div class="content">轉知「大專校院與國立故宮博物院人才培育合作實習計畫」</div>
-                        </a>
-                    </li>
-                    <li class="news_item">
-                        <a href="" class="clearfix">
-                            <div class="date">2018/07/14</div>
-                            <div class="tag blue">活動公告</div>
-                            <div class="content">轉知「大專校院與國立故宮博物院人才培育合作實習計畫」，轉知「大專校院與國立故宮博物院人才培育合作實習計畫」，轉知「大專校院與國立故宮博物院人才培育合作實習計畫」</div>
-                        </a>
-                    </li>
-                    <li class="news_item">
-                        <a href="" class="clearfix">
-                            <div class="date">2018/07/14</div>
-                            <div class="tag green">一般訊息</div>
-                            <div class="content">轉知「大專校院與國立故宮博物院人才培育合作實習計畫」</div>
-                        </a>
-                    </li>
+                    @foreach ($news as $new)
+                        <li class="news_item">
+                            <a href="{{ route('news.view',['id'=>$new->id]) }}" class="clearfix">
+                                <div class="date">{{date('Y/m/d',$new->start_time)}}</div>
+                                <div class="tag {{$type_array[$new->type]}}">{{$type_text[$new->type]}}</div>
+                                @if($new->top)
+                                    <div class="fixtop">[置頂]</div>
+                                @endif
+                                <div class="content">{{$new->title}}</div>
+                            </a>
+                        </li>
+                    @endforeach
                 </ul>
                 <nav aria-label="Page navigation">
                     <ul class="pagination justify-content-center">
-                        <li class="page-item">
-                            <a class="page-link" href="#" aria-label="Previous">
-                                <span aria-hidden="true">&laquo;</span>
-                            </a>
-                        </li>
-                        <li class="page-item"><a class="page-link" href="#">1</a></li>
-                        <li class="page-item"><a class="page-link" href="#">2</a></li>
-                        <li class="page-item"><a class="page-link" href="#">3</a></li>
-                        <li class="page-item">
-                            <a class="page-link" href="#" aria-label="Next">
-                                <span aria-hidden="true">&raquo;</span>
-                            </a>
-                        </li>
+                        {{$news->render()}}
                     </ul>
                 </nav>
             </div>

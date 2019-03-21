@@ -56,8 +56,17 @@ return [
     'Index News Normal' => '一般訊息',
 
     'Index Activity' => '校徵活動',
+    //links
     'Index Links' => '推廣連結',
-
+    'Choose Material' => '選擇素材',
+    'Link Edit' => '編輯連結',
+    //Material
+    'Material' => '推廣連結素材',
+    'Material Manager' => '素材管理',
+    'Material Create' => '新增素材',
+    'Material Edit' => '編輯素材',
+    'Material Image PS' => '提醒：圖片檔案小於 2MB，格式為jpg、png。',
+    'Material Link PS' => '請輸入含有https://',
 
     //Member
     'Member Company' => '企業專區',
@@ -97,6 +106,15 @@ return [
     'Edtime' => '下架時間',
     'Submit' => '確認',
     'Cancel' => '取消',
+    'File' => '附件',
+    'File PS' => '提醒：檔案可為 png 、 jpg 、 word 、 excel 、 Pdf，小於 5 MB。',
+    'No' => '序列',
+    'Type' => '類別',
+    'Name' => '名稱',
+    'Link' => '連結',
+    'Create Time' => '新增時間',
+    'Image' => '圖片',
+    //success or fail
     'File Error' => '儲存圖片失敗',
     'error' => '錯誤',
     'Edit Success' => '編輯成功',
@@ -105,15 +123,18 @@ return [
     'Sort Fail' => '更動排序失敗',
     'Delete Success' => '刪除成功',
     'Delete Fail' => '刪除失敗',
-    'File' => '附件',
-    'File PS' => '提醒：檔案可為 png 、 jpg 、 word 、 excel 、 Pdf，小於 5 MB。',
-    'No' => '序列',
+    'To Top Success' => '置頂成功',
+    'To Top Fail' => '置頂失敗',
+    'Dis Top Success' => '取消置頂成功',
+    'Dis Top Fail' => '取消置頂失敗',
+    'Delete Fail In Use' => '首頁連結使用中，更換資料方能刪除',
     //Notice
     'Name Notice' => '請輸入名稱',
     'Title Notice' => '請輸入標題',
     'Edtime Notice' => '請選擇下架時間',
     'Stime Notice' => '請選擇上架時間',
     'File Notice' => '請選擇檔案',
+    'Link Notice' => '請輸入連結',
     //Search
     'Search Date' => '日期',
     'Search Select Strat time' => '請選擇開始時間',

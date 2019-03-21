@@ -61,20 +61,9 @@
 								</span>
 							</a>
 						</li>
-						{{-- Activity --}}
-						<li class="m-menu__item " aria-haspopup="true" >
-							<a  href="" class="m-menu__link ">
-								<i class="m-menu__link-bullet m-menu__link-bullet--dot">
-									<span></span>
-								</i>
-								<span class="m-menu__link-text">
-                                    @lang('admin.Index Activity')
-								</span>
-							</a>
-						</li>
 						{{-- Links --}}
 						<li class="m-menu__item " aria-haspopup="true" >
-							<a  href="" class="m-menu__link ">
+							<a  href="{{route('index.link.index')}}" class="m-menu__link ">
 								<i class="m-menu__link-bullet m-menu__link-bullet--dot">
 									<span></span>
 								</i>

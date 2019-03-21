@@ -16,4 +16,5 @@ use Illuminate\Http\Request;
 //ajax
 Route::group(['prefix' => 'ajax', 'namespace' => 'Ajax',], function(){
 	Route::post('delete','FileController@deleteFile');
+	Route::post('getLinks','GetDataController@getLinks');
 });

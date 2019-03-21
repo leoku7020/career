@@ -25,7 +25,7 @@
                             <a href="">業師駐診</a>
                         </li>
                         <li class="nav-item">
-                            <a href="">職涯講座</a>
+                            <a href="{{ route('lecture') }}">職涯講座</a>
                         </li>
                         <li class="nav-item">
                             <a href="">校外實習</a>
@@ -93,7 +93,7 @@
                             <a href="">業師駐診</a>
                         </li>
                         <li class="mobile_menu_item">
-                            <a href="">職涯講座</a>
+                            <a href="{{ route('lecture') }}">職涯講座</a>
                         </li>
                         <li class="mobile_menu_item">
                             <a href="">校外實習</a>

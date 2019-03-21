@@ -137,7 +137,7 @@
                                                         <form action="{{ route('index.bannerDown') }}" method="POST" style="display: inline-block" id="down_{{$banner->id}}">
                                                             {{ csrf_field() }}
                                                             <input type="hidden" value="{{$banner->id}}" name="code">
-                                                            <button type="button" id="delete-task-{{ $banner->id }}" class="btn btn-accent m-btn m-btn--icon m-btn--icon-only" onclick="down({{$banner->id}});" {{($banner->sort == "4")?('disabled="disabled"'):('')}}>
+                                                            <button type="button" id="delete-task-{{ $banner->id }}" class="btn btn-accent m-btn m-btn--icon m-btn--icon-only" onclick="down({{$banner->id}});" {{($banner->sort == "8")?('disabled="disabled"'):('')}}>
                                                                 <i class="fa fa-arrow-down"></i>
                                                             </button>
                                                         </form>

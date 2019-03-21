@@ -24,7 +24,7 @@ class NewsController extends Controller
         $pageLimit = 10;
         $news = News::paginate($pageLimit);
 
-        return view('admin.index.news.index',compact('news'));
+        return view('admin.index.News.index',compact('news'));
     }
 
     public function search(Request $request){
@@ -64,7 +64,7 @@ class NewsController extends Controller
         //設定連結
         $news->setPath($setPath);
 
-        return view('admin.index.news.index',compact('news','old'));
+        return view('admin.index.News.index',compact('news','old'));
     }
     /**
      * Show the form for creating a new resource.
@@ -74,7 +74,7 @@ class NewsController extends Controller
     public function create()
     {
         //
-        return view('admin.index.news.create');
+        return view('admin.index.News.create');
     }
 
     /**
@@ -116,7 +116,7 @@ class NewsController extends Controller
                 ->with('success',Lang::get('admin.Edit Success'));
         }else{
             return redirect()->route('index.news.index')
-                ->with('success',Lang::get('admin.Edit Fail'));
+                ->with('error',Lang::get('admin.Edit Fail'));
         }
         
     }
@@ -143,7 +143,7 @@ class NewsController extends Controller
         //
         $new = News::where('id',$id)->first();
 
-        return view('admin.index.news.create',compact('new'));
+        return view('admin.index.News.create',compact('new'));
     }
 
     /**
@@ -169,7 +169,12 @@ class NewsController extends Controller
                 $file = FileProcess::saveMultipleFiles($request->file('file'),'news');
                 if($file){
                     $oldfile = News::getOldFile($id);
-                    $input['file'] = json_encode(array_merge($file,$oldfile));
+
+                    if($oldfile){
+                        $input['file'] = json_encode(array_merge($file,$oldfile));
+                    }else{
+                        $input['file'] = json_encode($file);
+                    }
                 }else{
                     $flag = false;
                 }
@@ -188,7 +193,7 @@ class NewsController extends Controller
                 ->with('success',Lang::get('admin.Edit Success'));
         }else{
             return redirect()->route('index.news.index')
-                ->with('success',Lang::get('admin.Edit Fail'));
+                ->with('error',Lang::get('admin.Edit Fail'));
         }
     }
 
@@ -222,7 +227,37 @@ class NewsController extends Controller
                 ->with('success',Lang::get('admin.Delete Success'));
         }else{
             return redirect()->route('index.news.index')
-                ->with('success',Lang::get('admin.Delete Fail'));
+                ->with('error',Lang::get('admin.Delete Fail'));
+        }
+    }
+
+    public function toTop($id){
+
+        $input['top'] = 1;
+        //更新
+        $new = News::updateNews($input,$id);
+
+        if($new){
+            return redirect()->route('index.news.index')
+                ->with('success',Lang::get('admin.To Top Success'));
+        }else{
+            return redirect()->route('index.news.index')
+                ->with('error',Lang::get('admin.To Top Fail'));
+        }
+    }
+
+    public function disTop($id){
+
+        $input['top'] = 0;
+        //更新
+        $new = News::updateNews($input,$id);
+
+        if($new){
+            return redirect()->route('index.news.index')
+                ->with('success',Lang::get('admin.Dis Top Success'));
+        }else{
+            return redirect()->route('index.news.index')
+                ->with('error',Lang::get('admin.Dis Top Fail'));
         }
     }
 

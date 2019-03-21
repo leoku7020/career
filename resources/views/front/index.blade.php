@@ -1,6 +1,10 @@
+@php
+    $type_array = ['1'=>'pink','2'=>'yellow','3'=>'blue','4'=>'green'];
+    $type_text = ['1'=>'實習資訊','2'=>'徵才快報','3'=>'活動公告','4'=>'一般訊息'];
+    $cover = ['1'=>'bg_first','2'=>'bg_second','3'=>'bg_third','4'=>'bg_fourth'];
+@endphp
 @extends('layouts.index')
 @section('content')
-
 <div class="index_news_area">
     <div class="page_top_area">
         <div class="inner-width">
@@ -16,86 +20,28 @@
     <div class="page_content_area">
         <div class="inner-width">
             <div class="index_news_area">
-                <div class="index_news_block clearfix">
-                    <div class="left_block">
-                        <div class="news_images_block bg_first">
-                            <div class="triangle"></div>
+                @foreach ($news as $new)
+                    <div class="index_news_block clearfix">
+                        <div class="left_block">
+                            <div class="news_images_block {{$cover[$new->type]}}">
+                                <div class="triangle"></div>
+                            </div>
+                            <div class="news_date_area clearfix">
+                                <div class="year">{{date('Y',$new->start_time)}}/</div>
+                                <div class="date {{$type_array[$new->type]}}">{{date('m/d',$new->start_time)}}</div>
+                            </div>
                         </div>
-                        <div class="news_date_area clearfix">
-                            <div class="year">2019/</div>
-                            <div class="date pink">12/12</div>
-                        </div>
-                    </div>
-                    <div class="right_block">
-                        <div class="decorative_block">
-                            <div class="decorative_line"></div>
-                        </div>
-                        <div class="news_content_block">
-                            <div class="tag pink">實習資訊</div>
-                            <a href="{{ route('news.view',['id'=>0]) }}" class="title">一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="index_news_block clearfix">
-                    <div class="left_block">
-                        <div class="news_images_block bg_second">
-                            <div class="triangle"></div>
-                        </div>
-                        <div class="news_date_area clearfix">
-                            <div class="year">2019/</div>
-                            <div class="date yellow">02/23</div>
+                        <div class="right_block">
+                            <div class="decorative_block">
+                                <div class="decorative_line"></div>
+                            </div>
+                            <div class="news_content_block">
+                                <div class="tag {{$type_array[$new->type]}}">{{$type_text[$new->type]}}</div>
+                                <a href="{{ route('news.view',['id'=>$new->id]) }}" class="title">{{$new->title}}</a>
+                            </div>
                         </div>
                     </div>
-                    <div class="right_block">
-                        <div class="decorative_block">
-                            <div class="decorative_line"></div>
-                        </div>
-                        <div class="news_content_block">
-                            <div class="tag yellow">徵才快報</div>
-                            <a href="{{ route('news.view',['id'=>0]) }}" class="title">一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="index_news_block clearfix">
-                    <div class="left_block">
-                        <div class="news_images_block bg_third">
-                            <div class="triangle"></div>
-                        </div>
-                        <div class="news_date_area clearfix">
-                            <div class="year">2019/</div>
-                            <div class="date blue">12/24</div>
-                        </div>
-                    </div>
-                    <div class="right_block">
-                        <div class="decorative_block">
-                            <div class="decorative_line"></div>
-                        </div>
-                        <div class="news_content_block">
-                            <div class="tag blue">活動公告</div>
-                            <a href="{{ route('news.view',['id'=>0]) }}" class="title">一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="index_news_block clearfix">
-                    <div class="left_block">
-                        <div class="news_images_block bg_fourth">
-                            <div class="triangle"></div>
-                        </div>
-                        <div class="news_date_area clearfix">
-                            <div class="year">2019/</div>
-                            <div class="date green">05/11</div>
-                        </div>
-                    </div>
-                    <div class="right_block">
-                        <div class="decorative_block">
-                            <div class="decorative_line"></div>
-                        </div>
-                        <div class="news_content_block">
-                            <div class="tag green">一般訊息</div>
-                            <a href="{{ route('news.view',['id'=>0]) }}" class="title">一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十</a>
-                        </div>
-                    </div>
-                </div>
+                @endforeach
             </div>
         </div>
         <div class="more_btn_block">
@@ -176,14 +122,9 @@
     <div class="line"></div>
     <div class="inner-width">
         <div class="promotion_link_block row">
-            <div class="col-12 col-sm-6 col-md-4 col-lg-3"><a href="" class="promotion_link_item" style="background-image: url('../../images/promotion_link_01.png')"></a></div>
-            <div class="col-12 col-sm-6 col-md-4 col-lg-3"><a href="" class="promotion_link_item" style="background-image: url('../../images/promotion_link_02.png')"></a></div>
-            <div class="col-12 col-sm-6 col-md-4 col-lg-3"><a href="" class="promotion_link_item" style="background-image: url('../../images/promotion_link_03.png')"></a></div>
-            <div class="col-12 col-sm-6 col-md-4 col-lg-3"><a href="" class="promotion_link_item" style="background-image: url('../../images/promotion_link_04.png')"></a></div>
-            <div class="col-12 col-sm-6 col-md-4 col-lg-3"><a href="" class="promotion_link_item" style="background-image: url('../../images/promotion_link_05.png')"></a></div>
-            <div class="col-12 col-sm-6 col-md-4 col-lg-3"><a href="" class="promotion_link_item" style="background-image: url('../../images/promotion_link_06.png')"></a></div>
-            <div class="col-12 col-sm-6 col-md-4 col-lg-3"><a href="" class="promotion_link_item" style="background-image: url('../../images/promotion_link_07.png')"></a></div>
-            <div class="col-12 col-sm-6 col-md-4 col-lg-3"><a href="" class="promotion_link_item" style="background-image: url('../../images/promotion_link_08.png')"></a></div>
+            @foreach ($links as $link)
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3"><a href="" class="promotion_link_item" style="background-image: url('../../images/upload/material/{{$link->material->cover}}')"></a></div>
+            @endforeach
         </div>
         <a href="" class="more_btn">more <i class="fa fa-sign-out" aria-hidden="true"></i></a>
     </div>
